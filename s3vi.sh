@@ -3,9 +3,9 @@
 
 . "${BASH_SOURCE%/*}/foovi.sh"
 
-ARG="$1"
+FILE="$1"
 
-if [[ -z $ARG ]]; then
+if [[ -z $FILE ]]; then
     echo "Usage: $0 FILE"
     echo
     echo "Edit files in S3"
@@ -15,11 +15,11 @@ if [[ -z $ARG ]]; then
 fi
 
 get() {
-    aws s3 cp "$ARG" "$1"
+    aws s3 cp "$FILE" "$1"
 }
 
 post() {
-    aws s3 cp "$1" "$ARG"
+    aws s3 cp "$1" "$FILE"
 }
 
 foovi
