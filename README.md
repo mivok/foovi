@@ -41,5 +41,7 @@ your script to load the foovi library:
 . "${BASH_SOURCE%/*}/foovi.sh"
 ```
 
+Finally, call `foovi` at the end of your script.
+
 And that's it. Test out your script and make sure the editing functionality
-works.
+works, and take a look at the httpbinvi.sh script for an example.
